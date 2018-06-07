@@ -18,5 +18,5 @@ set_option($ch2, "http://127.0.0.1/ ... path to image/2.jpg");
 set_option($ch3, "http://127.0.0.1/ ... path to image/3.jpg");
 set_option($ch4, "http://127.0.0.1/ ... path to image/4.jpg");
 
-demo3.php get the first image in background on load and the others images always in background on scroll event. The result on lighthouse test is 100 of speed performance. 
+demo3.php get the first image in background on load and the others images always in background on scroll event. The result on lighthouse test is 100 of speed performance : https://googlechrome.github.io/lighthouse/viewer/?gist=5bbc42a6b0e790f262add6420f3d00f1 
 In demo3.php to solve the problem of resizing and mobile responsive of the background images in a simple way I have put inside the div a png transparent image of 9.5kb  
