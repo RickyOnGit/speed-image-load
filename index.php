@@ -198,21 +198,13 @@ background-position: 0 0;
 </style>
 <script>
 window.addEventListener("load", function()
-{preloadImgs("<?php echo $img0 ?>","<?php echo $img1 ?>","<?php echo $img2 ?>","<?php echo $img3 ?>");
-myFnc("image_2","image_2"),myFnc("image_3","image_3");
+{myFnc("image_2","image_2"),myFnc("image_3","image_3");
 });
 
-window.addEventListener("scroll", function(){
-preloadImgs("<?php echo $img4 ?>");  
+window.addEventListener("scroll", function(){  
 myFnc("image_4","image_4");
 },{passive: true});
 
-
-function preloadImgs() {
-var d=document; var a=arguments; 
-if(!d.FP_imgs) {d.FP_imgs=new Array();};
-for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i];}
-}
 function myFnc(id, cls) {
 var element, name, arr;
 element = document.getElementById(id);
