@@ -198,7 +198,7 @@ background-position: 0 0;
 </style>
 <script>
 window.addEventListener("load", function()
-{myFnc("image_2","image_2"),myFnc("image_3","image_3");
+{myFnc("image_1","image_1"),myFnc("image_2","image_2"),myFnc("image_3","image_3");
 });
 
 window.addEventListener("scroll", function(){  
@@ -216,7 +216,7 @@ element.className += " " + name;}
 </script>
 </head>
   <body>
-<div id="image_1" class="image_1"><img src="<?php echo $img0 ?>" alt="img_0" srcset="<?php echo $img0.' 2000w,'.$newImg0_300_px_name.' 300w,'.$newImg0_768_px_name.' 768w,'.$newImg0_1024_px_name.' 1024w' ?>" sizes="100vw" /></div>
+<div id="image_1" ><img src="<?php echo $img0 ?>" alt="img_0" srcset="<?php echo $img0.' 2000w,'.$newImg0_300_px_name.' 300w,'.$newImg0_768_px_name.' 768w,'.$newImg0_1024_px_name.' 1024w' ?>" sizes="100vw" /></div>
 <div id="image_2" ><img src="<?php echo $img0 ?>" alt="img_0" srcset="<?php echo $img0.' 2000w,'.$newImg0_300_px_name.' 300w,'.$newImg0_768_px_name.' 768w,'.$newImg0_1024_px_name.' 1024w' ?>" sizes="100vw" /></div>
 <div id="image_3" ><img src="<?php echo $img0 ?>" alt="img_0" srcset="<?php echo $img0.' 2000w,'.$newImg0_300_px_name.' 300w,'.$newImg0_768_px_name.' 768w,'.$newImg0_1024_px_name.' 1024w' ?>" sizes="100vw" /></div>
 <div id="image_4" ><img src="<?php echo $img0 ?>" alt="img_0" srcset="<?php echo $img0.' 2000w,'.$newImg0_300_px_name.' 300w,'.$newImg0_768_px_name.' 768w,'.$newImg0_1024_px_name.' 1024w' ?>" sizes="100vw" /></div>
