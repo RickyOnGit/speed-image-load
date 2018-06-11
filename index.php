@@ -52,8 +52,7 @@ $newImg0_1024_px = $ref->resize($img0,'mobile_images',1024,NULL,NULL,TRUE); //cr
 $newImg0_1024_px_name = $ref->newfilename; //get the name (src) of new file  
 
 // ok all set (I hope) , let go on ... ;-)
-// now we have to set up the others (background) images for the css @media screen but I will do it tomorrow cause it is too late now and 
-// I am really very, very tired 
+// now we have to set up the others (background) images for the css @media screen ...
 
 $newImg1_300_px = $ref->resize($img1,'mobile_images',300,90,NULL,FALSE);
 $newImg1_300_px_name = $ref->newfilename;
@@ -83,7 +82,7 @@ $newImg4_768_px_name = $ref->newfilename;
 $newImg4_1024_px = $ref->resize($img4,'mobile_images',1024,90,NULL,FALSE);
 $newImg4_1024_px_name = $ref->newfilename;   
 
-// ok all set, I hope this work could be usefull and please let me know if there are errors 
+// ok all set, I hope this work could be usefull for someone and please let me know if there are errors 
               
 ?>
 <!DOCTYPE html>
