@@ -25,14 +25,15 @@ images (the case could be of an e-commerce web site or an booking system for an 
  
  *  param3 = integer -> number integer, is the new width in pixel of the new image, usually we should use : 300 or 768 or 1024 ;
  
- *  param4 = integer -> number integer, is the compression level, default value is  NULL = No compression but this is good only for gif and bmp; NOTE: 
- if the original file format is not a gif or bmp you have to insert a value;  possible values go from 0 to 100 for jpeg and webp where 
+ *  param4 = integer -> number integer, is the compression level, default value is  NULL = No compression but this is good only for gif; IMPORTANT NOTE: 
+ if the original file format is not a gif you have to insert a value;  possible values are from 0 to 100 for jpeg and webp where 
  100 is no compression and 0 is the max compression; 
- for png image files format, 0 to 9, at the contrary: 0 is no compression and 9 is max compression, I repeat, use NULL only for gif and for bmp;
+ for png image files format, 0 to 9, at the contrary: 0 is no compression and 9 is max compression, I repeat, use NULL only for gif;
  
- * param5 = 'string' or NULL ->  if it is set to NULL = no file format will be converted, the possible values are string: 'webp' or 'jpeg' or 'png' or 'gif' or 'bmp' ;
+ * param5 = 'string' or NULL ->  if it is set to NULL = no file format will be converted, the possible values are string: 'webp' or 'jpeg' or 'png' or 'gif' ;
  
- *  param6 = the possible values are: TRUE OR FALSE -> TRUE to set Transparency (Alpha Channel), FALSE to not set Transparency, NOTE: set transparency only if the original file format is png, gif or webp.
+ *  param6 = the possible values are: TRUE OR FALSE -> TRUE to set Transparency (Alpha Channel), FALSE to not set Transparency; 
+ IMPORTANT NOTE: set transparency only if the original file format is png, gif or webp or in you wish to convert into png, gif or webp.
  
  *  the new image files are generated only one time if the files do not exist, if the files exist the class will get only the file names.  
 * Here you will be able to check the lighthouse test result of this example: https://googlechrome.github.io/lighthouse/viewer/?gist=bfc7cc8a14fe47b77e86ebdffb5c991d
