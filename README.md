@@ -5,8 +5,8 @@ A stategy could be to use the CDN and to put max six resource for page into a CD
  *  In this example, with no CDN, the goal is to load faster the web page, loading less resource possible at the beginning and then   defer all the other; 
 resources (images in this case) that do not appear on the mobile screen and therefore do not need to load immediately.
  *  As reported by google, about 53% of smartphone users do not open a web page if a page does not load within 3 seconds. 
- The three seconds are refered to the fast 3G network with a 4x cpu throttling. 
- In short, less is the page weight and less are the requests for page (HTTP/1) to the same domain server, more we get in performance   speed.
+ The three seconds are refered to the fast 3G network with a 4x slow down cpu throttling. 
+ In short, less is the page weight and less are the requests for page (HTTP/1) to the same domain server, less are the DOM breakpoint,    more we get in performance speed.
  *  In this example,the layout resize of the div elements, is processed through the transparent gif image of only 2kbit, with a webp image it is possible to obtain less kbit but in this example let go on with a gif.
  The load event listener javascript function charges only the images that go inside the screen of a mobile device 
  and the scroll event listener defer the loading of the others images. In this example three images are loaded at the beginning while the fourth one is defered, so if you have many
