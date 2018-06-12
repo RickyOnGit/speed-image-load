@@ -39,9 +39,10 @@
  *  param3 = integer -> number integer, is the new width in pixel of the new image, usually we should use : 300 or 768 or 1024 ;
  *
  *  param4 = integer -> number integer, is the compression level, default value is  NULL = No compression but this is good only for gif  
- *  IMPORTANT NOTE: if the original file format is not a gif  you have to insert a value;  possible values go from 0 to 100 for jpeg and webp where 
- *  100 is no compression and 0 is the max compression; 
- *  for png image files format, 0 to 9, at the contrary: 0 is no compression and 9 is max compression, I repeat, use NULL only for gif;
+ *  IMPORTANT NOTE: if the original file format is not a gif  you have to insert a value;  possible values are from 0 to 100 for jpeg 
+ *  and webp where 100 is no compression and 0 is the max compression; 
+ *  for png image files format, possible values are from 0 to 9, at the contrary: 0 is no compression and 9 is max compression, 
+ *  I repeat, use NULL only for gif;
  *
  *  param5 = 'string' or NULL ->  if it is set to NULL = no file format will be converted, the possible values are string: 'webp' 
  *  or 'jpeg' or 'png' or 'gif';
