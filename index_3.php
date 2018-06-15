@@ -4,7 +4,7 @@
   * and so there is no need to set opacity into css style with the problem of the high cpu consuming viewed in the example index_2.php 
   * it's the fastest example at the moment. 
   * meanwhile I will try to find a solution to set opacity or transparency when I need to convert a 
-  * transparent image (gif, png) into webp with the Php GD_libray  ...bye ... bye ;-) see you soon.
+  * transparent image (gif, png) into webp with the Php GD_libray  ...bye ... bye, see you soon ;-).
 *****************************************************************************************************************************************/
 
 $img0 = "./images/trp.gif"; //original image size 2000 px x 1200 px transparent, this is a no background image to insert within the div element (I need it only to resize the div where there are the background images that I wish to display )
