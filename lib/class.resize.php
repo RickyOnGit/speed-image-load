@@ -1,4 +1,5 @@
 <?php 
+
 class imageResize{
 private $Scr = './images/trp.gif';
 private $NewDir = 'images';
@@ -6,16 +7,18 @@ private $NewWidth = 2000;
 private $Compr = NULL;
 private $Conv= NULL;
 private $Trans = FALSE;
+
 private function setTransparency($new_image,$image_source) 
-{        
+{       
 $transparencyIndex = imagecolortransparent($image_source); 
 $transparencyColor = array('red' => 255, 'green' => 255, 'blue' => 255); 
 if ($transparencyIndex >= 0) { 
 $transparencyColor = imagecolorsforindex($image_source, $transparencyIndex);    
 } 
 $transparencyIndex = imagecolorallocate($new_image, $transparencyColor['red'], $transparencyColor['green'], $transparencyColor['blue']); 
-imagefill($new_image, 0, 0, $transparencyIndex); 
-imagecolortransparent($new_image, $transparencyIndex); 
+imagefill($new_image, 0, 0, $transparencyIndex);
+imagesavealpha($new_image, true ); 
+imagecolortransparent($new_image, $transparencyIndex);  
 }
 
 public function resize($Scr,$NewDir,$NewWidth,$Compr=NULL,$Conv=NULL,$Trans=FALSE){
@@ -83,36 +86,55 @@ $source_imagey = imagesy($im);
 $dest_image = imagecreatetruecolor($dest_imagex, $dest_imagey);
 
 if (($fF=='png')||($fF=='gif')||($fF=='webp')&&($this->Trans==TRUE)){
-$this->setTransparency($dest_image,$im);}
 
-imagecopyresampled($dest_image, $im, 0, 0, 0, 0, $dest_imagex, 
-$dest_imagey, $source_imagex, $source_imagey);
+$this->setTransparency($dest_image,$im);
+imagealphablending($dest_image, true);
+}
+imagecopyresampled($dest_image, $im, 0, 0, 0, 0, $dest_imagex, $dest_imagey, $source_imagex, $source_imagey);
 if ($this->Conv==NULL){
 switch ($size['mime']) { 
-    case "image/gif": 
+    case "image/gif":                
         $newimg = imagegif($dest_image, $newfilename, $this->Compr); 
         break; 
     case "image/jpeg": 
         $newimg = imagejpeg($dest_image, $newfilename, $this->Compr);       
         break; 
-    case "image/png": 
+    case "image/png":
+        if ($this->Trans==TRUE){
+        imagetruecolortopalette($dest_image, false, 255);
+        }
         $newimg = imagepng($dest_image, $newfilename, $this->Compr);  
         break; 
-    case "image/webp": 
+    case "image/webp":
+        if ($this->Trans==TRUE){
+        $opacity = imagecolorallocatealpha($dest_image, 0, 0, 0, 127);
+        imagefill($dest_image, 0, 0, $opacity);
+        imagealphablending($dest_image, false );
+        imagesavealpha($dest_image, true );
+        }    
         $newimg = imagewebp($dest_image, $newfilename, $this->Compr); 
         break; 
 } }
 else if ($this->Conv=='webp'){
- $newimg = imagewebp($dest_image, $newfilename, $this->Compr);
+if ($this->Trans==TRUE){
+$opacity = imagecolorallocatealpha($dest_image, 0, 0, 0, 127);
+imagefill($dest_image, 0, 0, $opacity);
+imagealphablending($dest_image, false );
+imagesavealpha($dest_image, true );
+}
+$newimg = imagewebp($dest_image, $newfilename, $this->Compr);
 }
 else if ($this->Conv=='jpeg'){
- $newimg = imagejpeg($dest_image, $newfilename, $this->Compr);
+$newimg = imagejpeg($dest_image, $newfilename, $this->Compr);
 }
 else if ($this->Conv=='png'){
- $newimg = imagepng($dest_image, $newfilename, $this->Compr);
+if ($this->Trans==TRUE){
+imagetruecolortopalette($dest_image, false, 255);
+}
+$newimg = imagepng($dest_image, $newfilename, $this->Compr);
 }
 else if ($this->Conv=='gif'){
- $newimg = imagegif($dest_image, $newfilename, $this->Compr);
+$newimg = imagegif($dest_image, $newfilename, $this->Compr);
 }
 imagedestroy($im);
 return $newimg; 
