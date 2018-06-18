@@ -1,10 +1,9 @@
 <?php 
 /**************************************************************************************************************************************
   * In this other example I have converted only the background image files into webp, the transparent gif images no !!!  
-  * and so there is no need to set opacity into css style with the problem of the high cpu consuming viewed in the example index_2.php 
-  * it's the fastest example at the moment. 
+  * and so there is no need to set opacity into css style with the problem of the high cpu consuming viewed in the example index_2.php  
   * meanwhile I will try to find a solution to set opacity or transparency when I need to convert a 
-  * transparent image (gif, png) into webp with the Php GD_libray  ...bye ... bye, see you soon ;-).
+  * transparent image (gif, png) into webp with the Php GD_libray  ...bye ... bye ;-) see you soon.
 *****************************************************************************************************************************************/
 
 $img0 = "./images/trp.gif"; //original image size 2000 px x 1200 px transparent, this is a no background image to insert within the div element (I need it only to resize the div where there are the background images that I wish to display )
@@ -38,7 +37,7 @@ $new_1024_name = $ref->newfilename;
 return array($new_300_name,$new_768_name,$new_1024_name,$new_2000_name);
 }
 
-$images_0 = newimages($img0,90,TRUE,NULL); //these are the transparent images resized, compressed 90% and converted into webp if the browser support webp 
+$images_0 = newimages($img0,90,TRUE,NULL); //these are the transparent images resized, compressed 90% and converted into gif  
 list($newImg0_300_px_name,$newImg0_768_px_name, $newImg0_1024_px_name, $newImg0_2000_px_name)=$images_0; //here the list name (src) of the new four images 
 $images_1 = newimages($img1,90,FALSE,'webp'); // these are the jpeg images resized with a 90% of compression and no transparency and converted into webp if the browser support webp 
 list($newImg1_300_px_name,$newImg1_768_px_name, $newImg1_1024_px_name, $newImg1_2000_px_name)=$images_1; //here the list name (src) of the new four images
