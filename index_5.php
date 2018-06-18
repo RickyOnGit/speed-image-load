@@ -1,8 +1,7 @@
 <?php 
 /**************************************************************************************************************************************
   * In this other example I have converted the background image files into webp, and also the transparent gif images into webp !!!  
-  * In this example the images are all webp but the best result in speed performance I have recived from the example 4: file index_4.php
-  * where the transparent gif images are converted to transparent palette png images and the background images to webp images.
+  * In this example the images are all webp and I recived the best result in speed performance 
   * In this example the webp converted images are opened correctly into the web browser but if you try to open these images with 
   * any webp image editor it fail to open https://bugs.php.net/bug.php?id=66590 
   * I have opened a new issue about this problem: https://bugs.chromium.org/p/webp/issues/detail?id=389 because the solutions to fix this bug 
