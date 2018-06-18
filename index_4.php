@@ -2,8 +2,8 @@
 /**************************************************************************************************************************************
   * In this other example I have converted only the background image files into webp, the transparent gif images into png
   * and I have added into the class.resize.php the gd function for png: imagetruecolortopalette($source, false, 255); this convert 
-  * a truecolor png image  to a palette image and  make the new png transparent images very, but very, very light... better than a webp image, 
-  * and this increase the speed performance .
+  * a truecolor png image  to a palette image and  make the new png transparent images very, but very, very light, and this increase the speed performance, 
+  * sometimes the speed performance are more or less like with the webp images.
   * I was able to find a solution to set opacity or transparency when I need to convert a 
   * transparent image (gif, png) into webp with the Php gd_libray but there is a bug in php with the webp. 
   * the webp converted are opened correctly into the web browser but if you try to open these images with any webp image editor it fail to open
@@ -11,7 +11,8 @@
   * I have opened an issue about this problem: https://bugs.chromium.org/p/webp/issues/detail?id=389 because the solutions of the bug id 66590
   * doesn't work fine.
   * why I am doing all this experiments ? and all this speed test ? Because, in my opinion, there is now a great interested in developing 
-  * very fast web content and progressive web app for mobile and it is reasonable concentrate the efforts in this direction.
+  * very fast web content and progressive web app for mobile and it is reasonable concentrate the efforts in the direction of optimization of the speed
+  * performance.
 *****************************************************************************************************************************************/
 
 $img0 = "./images/trp.gif"; //original image size 2000 px x 1200 px transparent, this is a no background image to insert within the div element (I need it only to resize the div where there are the background images that I wish to display )
