@@ -32,5 +32,10 @@ resources (images in this case) that do not appear on the mobile screen and ther
  *  param6 = the possible values are: TRUE OR FALSE -> TRUE to set Transparency (Alpha Channel), FALSE to not set Transparency; 
  IMPORTANT NOTE: when resize or convert the images set transparency only if the original file source is completely transparent and the source file format is png, gif or webp or if you wish to convert a sorce image into png, gif or webp completely transparent.
  
- *  the new image files are generated only one time if the files do not exist, if the files exist the class will get only the file names.  
+ *  the new image files are generated only one time if the files do not exist, if the files exist the class will get only the file names. 
+ 
+ Here you will be able to see some lighthouse speed test:
+ * example 3) file: example_3.php -> https://googlechrome.github.io/lighthouse/viewer/?gist=cf021d19916ffaa3202059b409e837f5
+ * example 4) file: example_4.php -> https://googlechrome.github.io/lighthouse/viewer/?gist=07bd22ddd02bcaae5c18f05d2482f591
+ * example 5) file: example_5.php -> https://googlechrome.github.io/lighthouse/viewer/?gist=a03c7d0235e4be8dac5af0ed7df5334f
 
