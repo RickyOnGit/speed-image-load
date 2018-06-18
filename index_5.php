@@ -3,10 +3,10 @@
   * In this other example I have converted the background image files into webp, and also the transparent gif images into webp !!!  
   * In this example the images are all webp but the best result in speed performance I have recived from the example 4: file index_4.php
   * where the transparent gif images are converted to transparent palette png images and the background images to webp images.
-  * the webp converted are opened correctly into the web browser but if you try to open these images with any webp image editor it fail to open
-  * https://bugs.php.net/bug.php?id=66590 
+  * In this example the webp converted images are opened correctly into the web browser but if you try to open these images with 
+  * any webp image editor it fail to open https://bugs.php.net/bug.php?id=66590 
   * I have opened a new issue about this problem: https://bugs.chromium.org/p/webp/issues/detail?id=389 because the solutions to fix this bug 
-  * in the issue id 66590 doesn't work fine. 
+  * showed in the issue id 66590 doesn't work fine. 
 *****************************************************************************************************************************************/
 
 $img0 = "./images/trp.gif"; //original image size 2000 px x 1200 px transparent, this is a no background image to insert within the div element (I need it only to resize the div where there are the background images that I wish to display )
