@@ -39,3 +39,7 @@ resources (images in this case) that do not appear on the mobile screen and ther
  * example 4) file: example_4.php -> https://googlechrome.github.io/lighthouse/viewer/?gist=07bd22ddd02bcaae5c18f05d2482f591
  * example 5) file: example_5.php -> https://googlechrome.github.io/lighthouse/viewer/?gist=a03c7d0235e4be8dac5af0ed7df5334f
 
+NOTE:
+* Before this, I have tested the speed performance, converting the sources image files to '.webp' base64 encode. But, with my great amazement, the speed performances with base64 encode were slower and the CPU usage of the browser was higher. More CPU usage meaning more battery consuming. To decode the browser use CPU. 
+
+* I have also noted a decline in speed performance and higher CPU usage when I have set up opacity into the css style, perhaps instead of setting up opacity into CSS style it is better using a background image with the opacity setted 
