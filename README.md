@@ -7,7 +7,7 @@ resources (images in this case) that do not appear on the mobile screen and ther
  *  As reported by google, about 53% of smartphone users do not open a web page if a page does not load within 3 seconds. 
  The three seconds are refered to the fast 3G network with a 4x slow down cpu throttling. 
  In short, less is the page weight and less are the requests for page (HTTP/1) to the same domain server, less are the DOM breakpoint,     more we get in performance speed. Higher performance speed means for smartphone users less mobile data consuming and lower cost for    loading web contents. Low CPU usage means lower battery consuming. 
- *  There are three example with three different speed performance; according the lighthouse speed test the fastest is the example 4       (index_4.php)
+ *  There are three example with three different speed performance; according the lighthouse speed test the fastest is the example 5       (index_5.php), the example where all image files are converted to webp.
  *  The weight, the size and also, optionally, the file format coversion of the new images for mobile screen, is processed by php class. 
  The css @media screen options set the size of background images.
  *  Php Class usage:
