@@ -42,4 +42,8 @@ resources (images in this case) that do not appear on the mobile screen and ther
 NOTE:
 * Before this, I have tested the speed performance, converting the sources image files to '.webp' base64 encode. But, with my great amazement, the speed performances with base64 encode were slower and the CPU usage of the browser was higher. More CPU usage meaning more battery consuming. To decode the browser use CPU. 
 
-* I have also noted a decline in speed performance and higher CPU usage when I have set up opacity into the css style, perhaps instead of setting up opacity into CSS style it is better using a background image with the opacity setted 
+* I have also noted a decline in speed performance and higher CPU usage when I have set up opacity into the css style, perhaps, a tip could be, instead of setting up opacity into CSS style, could be better using a background image with the opacity setted. 
+
+* During the processing of this project in PHP for the resizing and conversion of image files, addressed more to evaluate the differences among performance of speed and optimization in the loading of resources, I stumbled into an error that I thought was due to a bug of the GD PHP library. I then opened an issue: https://bugs.chromium.org/p/webp/issues/detail?id=389 and it seems that the images converted with the PHP gd library are well formed and therefore should not have any problem, instead, there is a bug on the plugin of GIMP, software with which I tried to open WEBP files:
+[1] http://registry.gimp.org/node/25874
+[2] https://bugzilla.gnome.org/show_bug.cgi?id=769651
